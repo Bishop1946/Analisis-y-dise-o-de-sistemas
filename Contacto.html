@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="css/styles_Contacto.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <!-- HEADER -->
+    <div class="encabezado">
+        <div class="logo">
+            <img src="./assets/logo_intercondi.png" alt="Logo INTERCONDI">
+        </div>
+
+        <div class="titulo-menu">
+            <h1>INTERCONDI</h1>
+            <nav>
+
+                <div class="menu">
+
+                    <button type="button"  class="btn-inicio" onclick="window.location.href='index.html'">INICIO</button>
+                    <button type="button"  class="btn-inicio" onclick="window.location.href='proyectos.html'">NUESTROS PROYECTOS</button>
+                    <button type="button"  class="btn-inicio" onclick="window.location.href='nosotros.html'">NOSOTROS</button>
+                    <button type="button"  class="btn-inicio" onclick="window.location.href='Contacto.html'">CONTACTO</button>
+                </div>
+            </nav>
+
+        </div>
+        
+    </div>
+    <!-- HEADER ------------------------------------------------------------------------->
+
+
+    <!-- MAIN -->
+    <div class="principal">
+        <h2>FORMULARIO DE CONTACTO</h2>
+        <div class="formulario">
+            <label for="exampleInputName" class="label-nombre">Nombre completo</label>
+            <input type="text" class="input --name" id="exampleInputName" aria-describedby="emailHelp" 
+            placeholder="Nombres y apellidos">
+        </div>
+
+        <div class="formulario">
+            <label for="exampleInputPhone" class="form-label">Número de contacto</label>
+            <input type="text"  class="input --tel" id="exampleInputPhone" 
+            aria-describedby="emailHelp" placeholder="Teléfono o celular">
+        </div>
+
+         <div class="formulario">
+            <label for="exampleInputMail" class="form-label">Correo Electrónico</label>
+            <input type="email" class="input --mail" id="exampleInputMail" 
+            aria-describedby="emailHelp" placeholder="email">
+        </div>
+
+           <div class="formulario">
+            <label for="exampleInputDescription" class="form-label">Descripción complementaria</label>
+            <textarea id="descripcion" class="input input--text"  
+            placeholder="Breve descripcion del motivo por el cual nos contactas "></textarea>
+            
+        </div>
+
+
+
+        <div id="emailHelp" class="form-text">Nunca compartiremos tu informacion con nadie.</div>
+
+            
+    </div>
+    <!-- MAIN -->
+
+
+    <!-- FOOTER ----------------------------------------------------------------->
+    <footer class="pie">
+
+
+        <div class="footer-left">
+            <img src="./assets/logo_sinfondo.png" alt="Logo INTERCONDI">
+        </div>
+        <div class="footer-center">
+
+            <p>Sede principal: CR 47 125 14 Soacha - Cundinamarca</p>
+            <p>Sede operativa: Calle 19 # 41-39 Barrio Villa María Villavicencio - Meta</p>
+            <p>Tel: 310 684 8983</p>
+            <p>Email: intercondisas@gmail.com</p>
+        </div>
+
+        <div class="footer-right">
+
+            <img src="./assets/logo_sinfondo.png" alt="Logo INTERCONDI">
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+
+     <!-- DERECHOS DE AUTOR ------------------------------------->
+    <div class="copyright">
+        <p>Copyright © 2025 Intercondi SAS</p>
+        
+    </div>
+    <!-- DERECHOS DE AUTOR -->
+
+
+</body>
+</html>
