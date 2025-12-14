@@ -1,0 +1,359 @@
+/* ========================================
+   RESET Y CONFIGURACIÓN BÁSICA
+======================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #6FA8DC;
+  color: #333;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.titulo-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-menu h1 {
+  font-size: 2rem;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+/* NAV */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-inicio {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-inicio:hover {
+  background-color: #0056b3;
+}
+
+/* Botón menú móvil (oculto en escritorio) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ========================================
+   SECCIÓN PRINCIPAL
+======================================== */
+.principal {
+  background-color: #6FA8DC;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 30px 5%;
+}
+
+/* Texto izquierdo y derecho */
+.info-left,
+.info-right {
+  flex: 1 1 300px;
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ========================================
+   CARRUSEL
+======================================== */
+.carrusel {
+  flex: 1 1 500px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.15);
+}
+
+.carrusel h2 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.slides {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mostrar imagen activa */
+#slide1:checked ~ .first,
+#slide2:checked ~ .slide:nth-of-type(2),
+#slide3:checked ~ .slide:nth-of-type(3),
+#slide4:checked ~ .slide:nth-of-type(4),
+#slide5:checked ~ .slide:nth-of-type(5) {
+  opacity: 1;
+}
+
+/* Indicadores inferiores */
+.navigation {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.bar {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bar:hover {
+  background-color: white;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.pie {
+  background-color: #CCCCCC;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  border-top: 2px solid #aaa;
+}
+
+.pie p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-left img,
+.footer-right img {
+  height: 80px;
+  width: auto;
+}
+
+/* ========================================
+   COPYRIGHT
+======================================== */
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ========================================
+   MEDIA QUERIES (RESPONSIVE)
+======================================== */
+
+/* Tablets (hasta 992px) */
+@media (max-width: 992px) {
+  .encabezado {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .btn-inicio {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .principal {
+    flex-direction: column;
+  }
+
+  .info-left, .info-right {
+    max-width: 100%;
+  }
+
+  .carrusel {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* Móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .titulo-menu h1 {
+    font-size: 1.8rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .btn-inicio {
+    padding: 12px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .slide img {
+    object-fit: cover;
+  }
+
+  .footer-left img,
+  .footer-right img {
+    height: 60px;
+  }
+}
+
+/* Extra pequeño (hasta 480px) */
+@media (max-width: 480px) {
+  .titulo-menu h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-inicio {
+    font-size: 0.9rem;
+  }
+
+  .carrusel h2 {
+    font-size: 1.1rem;
+  }
+
+  .pie p {
+    font-size: 0.8rem;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa toda la pantalla */
+}
+
+main.principal {
+  flex: 1; /* hace que el contenido principal se expanda */
+}
+
+/* ========================================
+   DESCRIPCIÓN DEL CARRUSEL
+======================================== */
+.descripcion {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 8px 5px;
+  border-radius: 0 0 10px 10px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* Mostrar descripción solo de la imagen activa */
+#slide1:checked ~ .first .descripcion,
+#slide2:checked ~ .slide:nth-of-type(2) .descripcion,
+#slide3:checked ~ .slide:nth-of-type(3) .descripcion,
+#slide4:checked ~ .slide:nth-of-type(4) .descripcion,
+#slide5:checked ~ .slide:nth-of-type(5) .descripcion {
+  opacity: 1;
+}
